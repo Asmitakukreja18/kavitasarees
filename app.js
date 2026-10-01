@@ -381,16 +381,16 @@ function checkoutViaWhatsApp() {
                   `Hello Kavita Sarees Team! I would like to place an order for:%0A%0A` +
                   `${itemsText}%0A%0A` +
                   `*Total Amount:* ₹${total.toLocaleString('en-IN')}%0A` +
-                  `*Store Location:* Shop No. 79, Dreamland Complex, Nandgaon Peth, Amravati%0A%0A` +
+                  `*Store Location:* Lane L3, Block K3, Busyland Complex, Nandgaon Peth, Amravati%0A%0A` +
                   `Please confirm item availability & delivery options. Thank you!`;
 
-    const phone = "919876543210";
+    const phone = "917038899780";
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 }
 
 function getWhatsAppLink(saree) {
     const message = `Hello Kavita Sarees! I am interested in purchasing *${saree.title}* (Price: ₹${saree.price}). Please share available color variants and delivery options.`;
-    return `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/917038899780?text=${encodeURIComponent(message)}`;
 }
 
 // Quick View Modal
@@ -564,6 +564,13 @@ function initEventListeners() {
         mobileToggle.addEventListener("click", () => {
             navMenu.classList.toggle("active");
         });
+
+        // Close mobile drawer when a nav link is clicked
+        navMenu.querySelectorAll(".nav-link").forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("active");
+            });
+        });
     }
 
     const apptForm = document.getElementById("appointmentForm");
@@ -575,4 +582,117 @@ function initEventListeners() {
             apptForm.reset();
         });
     }
+}
+
+// Review Filtering Functionality
+function filterReviews(category, btn) {
+    const filterBtns = document.querySelectorAll(".review-filter-btn");
+    filterBtns.forEach(b => b.classList.remove("active"));
+    if (btn) btn.classList.add("active");
+
+    const cards = document.querySelectorAll("#reviewsGrid .review-card");
+    cards.forEach(card => {
+        const cardCat = card.getAttribute("data-category");
+        if (category === "all" || cardCat === category) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+// Review Modal and Submission
+let currentRating = 5;
+
+function openReviewModal() {
+    const modal = document.getElementById("reviewModal");
+    if (modal) {
+        modal.classList.add("active");
+        setFormRating(5);
+    }
+}
+
+function closeReviewModal() {
+    const modal = document.getElementById("reviewModal");
+    if (modal) modal.classList.remove("active");
+}
+
+function setFormRating(stars) {
+    currentRating = stars;
+    const starIcons = document.querySelectorAll("#starRatingInput i");
+    starIcons.forEach((icon, idx) => {
+        if (idx < stars) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+            icon.style.color = "#fbbc04";
+        } else {
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular");
+            icon.style.color = "#ccc";
+        }
+    });
+}
+
+function submitNewReview(e) {
+    e.preventDefault();
+    const name = document.getElementById("reviewName").value.trim();
+    const city = document.getElementById("reviewCity").value.trim();
+    const category = document.getElementById("reviewCategory").value;
+    const text = document.getElementById("reviewText").value.trim();
+
+    if (!name || !text) return;
+
+    const initials = name.split(" ").map(w => w[0]).join("").toUpperCase().slice(0, 2) || "KR";
+
+    const catLabels = {
+        bridal: "Bridal Trousseau",
+        nauvari: "Nauvari Paithani",
+        kids: "Kids Wear",
+        wholesale: "Aher Wholesale"
+    };
+
+    let starsHtml = "";
+    for (let i = 0; i < 5; i++) {
+        starsHtml += i < currentRating 
+            ? '<i class="fa-solid fa-star"></i>' 
+            : '<i class="fa-regular fa-star" style="color: #ccc;"></i>';
+    }
+
+    const newCard = document.createElement("div");
+    newCard.className = "review-card";
+    newCard.setAttribute("data-category", category);
+    newCard.style.animation = "fadeIn 0.5s ease";
+    newCard.innerHTML = `
+        <div>
+            <div class="review-card-header">
+                <div class="review-user-info">
+                    <div class="review-avatar" style="background: linear-gradient(135deg, var(--primary-maroon), var(--royal-gold));">${initials}</div>
+                    <div>
+                        <div class="review-author-name">${name}</div>
+                        <div class="review-author-loc">${city || "Amravati"}</div>
+                    </div>
+                </div>
+                <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
+            </div>
+            <div class="review-stars-row">
+                ${starsHtml}
+            </div>
+            <p class="review-text">
+                "${text}"
+            </p>
+        </div>
+        <div class="review-footer">
+            <span class="review-tag">${catLabels[category] || "Customer Review"}</span>
+            <span>Just now</span>
+        </div>
+    `;
+
+    const grid = document.getElementById("reviewsGrid");
+    if (grid) {
+        grid.prepend(newCard);
+    }
+
+    closeReviewModal();
+    document.getElementById("newReviewForm").reset();
+    showToast(`Thank you ${name}! Your Google review has been posted successfully! ⭐⭐⭐⭐⭐`);
 }
