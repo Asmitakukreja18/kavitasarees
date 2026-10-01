@@ -148,13 +148,18 @@ h1, h2, h3, h4, h5, .brand-font {
 }
 
 .store-logo-img {
-    height: 48px;
-    width: 48px;
+    height: 52px;
+    width: 52px;
     border-radius: 50%;
     border: 2px solid var(--royal-gold);
-    box-shadow: 0 0 8px var(--gold-glow);
+    box-shadow: 0 0 10px var(--gold-glow);
     object-fit: cover;
     flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.store-logo-img:hover {
+    transform: scale(1.05);
 }
 
 .brand-text {
