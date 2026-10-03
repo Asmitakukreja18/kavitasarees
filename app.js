@@ -696,3 +696,15 @@ function submitNewReview(e) {
     document.getElementById("newReviewForm").reset();
     showToast(`Thank you ${name}! Your Google review has been posted successfully! ⭐⭐⭐⭐⭐`);
 }
+
+function markReviewHelpful(el) {
+    if (el.classList.contains("liked")) return;
+    el.classList.add("liked");
+    const countSpan = el.querySelector(".helpful-count");
+    if (countSpan) {
+        countSpan.textContent = parseInt(countSpan.textContent, 10) + 1;
+    }
+    el.style.color = "#1a73e8";
+    showToast("Marked as helpful! Thank you.");
+}
+

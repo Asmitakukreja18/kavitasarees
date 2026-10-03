@@ -335,13 +335,64 @@
                 <p class="section-subtitle">Real experiences from families and brides who trusted Kavita Sarees & Kids Wear for their celebrations.</p>
             </div>
 
+            <!-- Google Rating Summary Banner -->
+            <div class="google-rating-banner">
+                <div class="google-rating-info">
+                    <div class="google-icon-circle">
+                        <svg viewBox="0 0 24 24" width="34" height="34">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.24v3.15C3.26 21.36 7.33 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.24C.45 8.14 0 9.9 0 12s.45 3.86 1.24 5.42l4.04-3.15z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.24 6.58l4.04 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="display: flex; align-items: baseline; gap: 8px;">
+                            <span class="google-rating-number">4.9</span>
+                            <span style="font-size: 1rem; color: var(--text-muted); font-weight: 600;">/ 5.0</span>
+                        </div>
+                        <div class="google-stars-display">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="google-verified-text">
+                            <strong>148+ Google Reviews</strong> &bull; Kavita Sarees &amp; Kids Wear, Nandgaon Peth Busyland
+                        </div>
+                    </div>
+                </div>
 
+                <div class="google-banner-actions">
+                    <button class="btn btn-primary" onclick="openReviewModal()" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-pen-to-square"></i> Write a Review
+                    </button>
+                    <a href="https://maps.google.com/?q=Busyland+Complex+Nandgaon+Peth+Amravati" target="_blank" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <svg viewBox="0 0 24 24" width="16" height="16" style="vertical-align: middle;">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.24v3.15C3.26 21.36 7.33 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.24C.45 8.14 0 9.9 0 12s.45 3.86 1.24 5.42l4.04-3.15z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.24 6.58l4.04 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                        </svg>
+                        See all reviews on Google
+                    </a>
+                </div>
+            </div>
+
+            <!-- Demo Content Badge -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span class="demo-review-notice">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Sample Reviews &mdash; Demo Content for Client Presentation</span>
+                </span>
+            </div>
 
             <!-- Reviews Filter Bar -->
             <div class="reviews-filter-bar">
-                <button class="review-filter-btn active" onclick="filterReviews('all', this)">All Reviews (6)</button>
-                <button class="review-filter-btn" onclick="filterReviews('bridal', this)">Bridal & Sarees</button>
-                <button class="review-filter-btn" onclick="filterReviews('nauvari', this)">Nauvari & Paithani</button>
+                <button class="review-filter-btn active" onclick="filterReviews('all', this)">All Reviews (8)</button>
+                <button class="review-filter-btn" onclick="filterReviews('bridal', this)">Bridal &amp; Sarees</button>
+                <button class="review-filter-btn" onclick="filterReviews('nauvari', this)">Nauvari &amp; Paithani</button>
                 <button class="review-filter-btn" onclick="filterReviews('kids', this)">Kids Wear</button>
                 <button class="review-filter-btn" onclick="filterReviews('wholesale', this)">Aher Wholesale</button>
             </div>
@@ -356,7 +407,10 @@
                                 <div class="review-avatar">PD</div>
                                 <div>
                                     <div class="review-author-name">Pooja Deshmukh</div>
-                                    <div class="review-author-loc">Amravati, Maharashtra</div>
+                                    <div class="review-author-meta">
+                                        <span>Amravati</span> &bull; 
+                                        <span class="review-local-guide"><i class="fa-solid fa-certificate"></i> Local Guide (14)</span>
+                                    </div>
                                 </div>
                             </div>
                             <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
@@ -370,6 +424,9 @@
                     </div>
                     <div class="review-footer">
                         <span class="review-tag">Bridal Trousseau</span>
+                        <span class="review-helpful-action" onclick="markReviewHelpful(this)">
+                            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">19</span>)
+                        </span>
                         <span>2 days ago</span>
                     </div>
                 </div>
@@ -382,7 +439,10 @@
                                 <div class="review-avatar" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">RA</div>
                                 <div>
                                     <div class="review-author-name">Rajesh Agrawal</div>
-                                    <div class="review-author-loc">Badnera, Amravati</div>
+                                    <div class="review-author-meta">
+                                        <span>Badnera, Amravati</span> &bull; 
+                                        <span style="color: #1a73e8; font-weight: 600;">Verified Buyer</span>
+                                    </div>
                                 </div>
                             </div>
                             <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
@@ -396,6 +456,9 @@
                     </div>
                     <div class="review-footer">
                         <span class="review-tag">Aher Wholesale Combo</span>
+                        <span class="review-helpful-action" onclick="markReviewHelpful(this)">
+                            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">24</span>)
+                        </span>
                         <span>1 week ago</span>
                     </div>
                 </div>
@@ -408,7 +471,10 @@
                                 <div class="review-avatar" style="background: linear-gradient(135deg, #11998e, #38ef7d);">SK</div>
                                 <div>
                                     <div class="review-author-name">Snehal Kulkarni</div>
-                                    <div class="review-author-loc">Nandgaon Peth, Amravati</div>
+                                    <div class="review-author-meta">
+                                        <span>Nandgaon Peth</span> &bull; 
+                                        <span class="review-local-guide"><i class="fa-solid fa-certificate"></i> Local Guide (22)</span>
+                                    </div>
                                 </div>
                             </div>
                             <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
@@ -421,7 +487,10 @@
                         </p>
                     </div>
                     <div class="review-footer">
-                        <span class="review-tag">Kids Sherwani & Saree</span>
+                        <span class="review-tag">Kids Sherwani &amp; Saree</span>
+                        <span class="review-helpful-action" onclick="markReviewHelpful(this)">
+                            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">15</span>)
+                        </span>
                         <span>2 weeks ago</span>
                     </div>
                 </div>
@@ -434,7 +503,10 @@
                                 <div class="review-avatar" style="background: linear-gradient(135deg, #f857a6, #ff5858);">AW</div>
                                 <div>
                                     <div class="review-author-name">Anjali Wankhade</div>
-                                    <div class="review-author-loc">Amravati City</div>
+                                    <div class="review-author-meta">
+                                        <span>Amravati City</span> &bull; 
+                                        <span style="color: #1a73e8; font-weight: 600;">Verified Buyer</span>
+                                    </div>
                                 </div>
                             </div>
                             <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
@@ -448,6 +520,9 @@
                     </div>
                     <div class="review-footer">
                         <span class="review-tag">Nauvari Paithani</span>
+                        <span class="review-helpful-action" onclick="markReviewHelpful(this)">
+                            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">31</span>)
+                        </span>
                         <span>3 weeks ago</span>
                     </div>
                 </div>
@@ -459,8 +534,11 @@
                             <div class="review-user-info">
                                 <div class="review-avatar" style="background: linear-gradient(135deg, #654ea3, #eaafc8);">VP</div>
                                 <div>
-                                    <div class="review-author-name">Vikas & Sunita Patil</div>
-                                    <div class="review-author-loc">Yavatmal / Amravati</div>
+                                    <div class="review-author-name">Vikas &amp; Sunita Patil</div>
+                                    <div class="review-author-meta">
+                                        <span>Yavatmal / Amravati</span> &bull; 
+                                        <span class="review-local-guide"><i class="fa-solid fa-certificate"></i> Local Guide (9)</span>
+                                    </div>
                                 </div>
                             </div>
                             <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
@@ -473,7 +551,10 @@
                         </p>
                     </div>
                     <div class="review-footer">
-                        <span class="review-tag">Instagram Discovery</span>
+                        <span class="review-tag">Bridal Lehenga &amp; Sarees</span>
+                        <span class="review-helpful-action" onclick="markReviewHelpful(this)">
+                            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">18</span>)
+                        </span>
                         <span>1 month ago</span>
                     </div>
                 </div>
@@ -486,7 +567,10 @@
                                 <div class="review-avatar" style="background: linear-gradient(135deg, #d38312, #a83279);">NJ</div>
                                 <div>
                                     <div class="review-author-name">Dr. Neha Joshi</div>
-                                    <div class="review-author-loc">Camp, Amravati</div>
+                                    <div class="review-author-meta">
+                                        <span>Camp, Amravati</span> &bull; 
+                                        <span style="color: #1a73e8; font-weight: 600;">Verified Buyer</span>
+                                    </div>
                                 </div>
                             </div>
                             <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
@@ -499,8 +583,75 @@
                         </p>
                     </div>
                     <div class="review-footer">
-                        <span class="review-tag">Kids Wear & Sarees</span>
+                        <span class="review-tag">Kids Wear &amp; Sarees</span>
+                        <span class="review-helpful-action" onclick="markReviewHelpful(this)">
+                            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">12</span>)
+                        </span>
                         <span>1 month ago</span>
+                    </div>
+                </div>
+
+                <!-- Review 7 -->
+                <div class="review-card" data-category="wholesale">
+                    <div>
+                        <div class="review-card-header">
+                            <div class="review-user-info">
+                                <div class="review-avatar" style="background: linear-gradient(135deg, #0ba360, #3cba92);">MR</div>
+                                <div>
+                                    <div class="review-author-name">Manisha Rathi</div>
+                                    <div class="review-author-meta">
+                                        <span>Akola / Amravati</span> &bull; 
+                                        <span class="review-local-guide"><i class="fa-solid fa-certificate"></i> Local Guide (31)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
+                        </div>
+                        <div class="review-stars-row">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Ordered 50+ sarees for family aher and gifting for our elder son's wedding. The owner personally guided us with color palettes and box packaging. Wholesale rate with zero compromise on texture. Truly unmatched experience in Vidarbha!"
+                        </p>
+                    </div>
+                    <div class="review-footer">
+                        <span class="review-tag">Bulk Aher Wholesale</span>
+                        <span class="review-helpful-action" onclick="markReviewHelpful(this)">
+                            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">27</span>)
+                        </span>
+                        <span>1 month ago</span>
+                    </div>
+                </div>
+
+                <!-- Review 8 -->
+                <div class="review-card" data-category="nauvari">
+                    <div>
+                        <div class="review-card-header">
+                            <div class="review-user-info">
+                                <div class="review-avatar" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">PK</div>
+                                <div>
+                                    <div class="review-author-name">Pallavi &amp; Sachin Kale</div>
+                                    <div class="review-author-meta">
+                                        <span>Morshi, Amravati</span> &bull; 
+                                        <span style="color: #1a73e8; font-weight: 600;">Verified Buyer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-badge-verified"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
+                        </div>
+                        <div class="review-stars-row">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Purchased authentic Yeola Paithani and designer festive sarees. The lustrous gold zari border and vibrant peacock motifs are breathtaking. Highly recommend Kavita Sarees for anyone looking for authentic Maharashtrian wedding sarees."
+                        </p>
+                    </div>
+                    <div class="review-footer">
+                        <span class="review-tag">Yeola Paithani &amp; Sarees</span>
+                        <span class="review-helpful-action" onclick="markReviewHelpful(this)">
+                            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">16</span>)
+                        </span>
+                        <span>2 months ago</span>
                     </div>
                 </div>
             </div>

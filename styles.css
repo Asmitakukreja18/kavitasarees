@@ -1515,6 +1515,58 @@ h1, h2, h3, h4, h5, .brand-font {
     border: 1px solid #e5dccf;
 }
 
+/* Demo notice & Google reviews badges */
+.demo-review-notice {
+    background: #fdfaf6;
+    border: 1px dashed rgba(184, 134, 11, 0.4);
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.82rem;
+    color: #6c5a4b;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.demo-review-notice i {
+    color: var(--primary-maroon);
+}
+
+.review-author-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.review-local-guide {
+    color: #e37400;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.72rem;
+}
+
+.review-helpful-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 0.78rem;
+    color: #70757a;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.review-helpful-action:hover {
+    color: #1a73e8;
+}
+
+
 /* Busyland Store Location & Google Map Card */
 .store-location-wrapper {
     background: #fff;
